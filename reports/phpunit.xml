@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="AllTests" tests="27" assertions="28" failures="2" errors="0" time="2.429156">
+    <testsuite name="ExampleTest" file="/home/vagrant/Code/Laravel/tests/ExampleTest.php" tests="1" assertions="2" failures="0" errors="0" time="2.283953">
+      <testcase name="testBasicExample" class="ExampleTest" file="/home/vagrant/Code/Laravel/tests/ExampleTest.php" line="14" assertions="2" time="2.283953"/>
+    </testsuite>
+    <testsuite name="HelloTest" file="/home/vagrant/Code/Laravel/tests/HelloTest.php" tests="2" assertions="2" failures="0" errors="0" time="0.008305">
+      <testcase name="testAssertTrue" class="HelloTest" file="/home/vagrant/Code/Laravel/tests/HelloTest.php" line="17" assertions="1" time="0.008000"/>
+      <testcase name="testAssertEquals" class="HelloTest" file="/home/vagrant/Code/Laravel/tests/HelloTest.php" line="22" assertions="1" time="0.000305"/>
+    </testsuite>
+    <testsuite name="HttpRequestTest" file="/home/vagrant/Code/Laravel/tests/HttpRequsetTest.php" tests="2" assertions="2" failures="1" errors="0" time="0.117432">
+      <testcase name="testGetResponse200" class="HttpRequestTest" file="/home/vagrant/Code/Laravel/tests/HttpRequsetTest.php" line="10" assertions="1" time="0.002037"/>
+      <testcase name="testAssertEquals" class="HttpRequestTest" file="/home/vagrant/Code/Laravel/tests/HttpRequsetTest.php" line="15" assertions="1" time="0.115395">
+        <failure type="PHPUnit_Framework_ExpectationFailedException">HttpRequestTest::testAssertEquals
+Expected is not equal actual
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'2 3 5'
++'bar'
+
+/home/vagrant/Code/Laravel/tests/HttpRequsetTest.php:20
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/tasks/ext/phpunit/PHPUnitTestRunner.php:146
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/tasks/ext/phpunit/PHPUnitTask.php:515
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/tasks/ext/phpunit/PHPUnitTask.php:450
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/UnknownElement.php:100
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/Task.php:283
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/Target.php:336
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/Target.php:366
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/Project.php:898
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/Project.php:868
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/Phing.php:706
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/Phing.php:196
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/Phing.php:343
+/home/vagrant/Code/Laravel/vendor/phing/phing/bin/phing.php:58
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="FizzbuzzServiceTest" file="/home/vagrant/Code/Laravel/tests/service/FizzbuzzServiceTest.php" tests="6" assertions="6" failures="1" errors="0" time="0.009444">
+      <testcase name="testGetOne" class="FizzbuzzServiceTest" file="/home/vagrant/Code/Laravel/tests/service/FizzbuzzServiceTest.php" line="15" assertions="1" time="0.008071"/>
+      <testcase name="testGetFizz" class="FizzbuzzServiceTest" file="/home/vagrant/Code/Laravel/tests/service/FizzbuzzServiceTest.php" line="21" assertions="1" time="0.000159"/>
+      <testcase name="testGetBuzz" class="FizzbuzzServiceTest" file="/home/vagrant/Code/Laravel/tests/service/FizzbuzzServiceTest.php" line="27" assertions="1" time="0.000155"/>
+      <testcase name="testGetFizzBuzz" class="FizzbuzzServiceTest" file="/home/vagrant/Code/Laravel/tests/service/FizzbuzzServiceTest.php" line="33" assertions="1" time="0.000152"/>
+      <testcase name="testGetFizzBuzzArray1" class="FizzbuzzServiceTest" file="/home/vagrant/Code/Laravel/tests/service/FizzbuzzServiceTest.php" line="39" assertions="1" time="0.000294"/>
+      <testcase name="testGetFizzBuzzArrayFizz" class="FizzbuzzServiceTest" file="/home/vagrant/Code/Laravel/tests/service/FizzbuzzServiceTest.php" line="44" assertions="1" time="0.000613">
+        <failure type="PHPUnit_Framework_ExpectationFailedException">FizzbuzzServiceTest::testGetFizzBuzzArrayFizz
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'1 2 Fizz'
++'Fizz'
+
+/home/vagrant/Code/Laravel/tests/service/FizzbuzzServiceTest.php:47
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/tasks/ext/phpunit/PHPUnitTestRunner.php:146
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/tasks/ext/phpunit/PHPUnitTask.php:515
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/tasks/ext/phpunit/PHPUnitTask.php:450
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/UnknownElement.php:100
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/Task.php:283
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/Target.php:336
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/Target.php:366
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/Project.php:898
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/Project.php:868
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/Phing.php:706
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/Phing.php:196
+/home/vagrant/Code/Laravel/vendor/phing/phing/classes/phing/Phing.php:343
+/home/vagrant/Code/Laravel/vendor/phing/phing/bin/phing.php:58
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="ParserMarkdownServiceTest" file="/home/vagrant/Code/Laravel/tests/service/ParserMarkdownServiceTest.php" tests="8" assertions="8" failures="0" errors="0" time="0.001326">
+      <testsuite name="ParserMarkdownServiceTest::testParseMarkdown" tests="8" assertions="8" failures="0" errors="0" time="0.001326">
+        <testcase name="testParseMarkdown with data set #0" assertions="1" time="0.000290"/>
+        <testcase name="testParseMarkdown with data set #1" assertions="1" time="0.000211"/>
+        <testcase name="testParseMarkdown with data set #2" assertions="1" time="0.000170"/>
+        <testcase name="testParseMarkdown with data set #3" assertions="1" time="0.000134"/>
+        <testcase name="testParseMarkdown with data set #4" assertions="1" time="0.000125"/>
+        <testcase name="testParseMarkdown with data set #5" assertions="1" time="0.000138"/>
+        <testcase name="testParseMarkdown with data set #6" assertions="1" time="0.000133"/>
+        <testcase name="testParseMarkdown with data set #7" assertions="1" time="0.000125"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="WhetherUvServiceTest" file="/home/vagrant/Code/Laravel/tests/service/WhetherUvServiceTest.php" tests="8" assertions="8" failures="0" errors="0" time="0.008696">
+      <testcase name="testGetLow" class="WhetherUvServiceTest" file="/home/vagrant/Code/Laravel/tests/service/WhetherUvServiceTest.php" line="12" assertions="1" time="0.007674"/>
+      <testcase name="testGetModerate" class="WhetherUvServiceTest" file="/home/vagrant/Code/Laravel/tests/service/WhetherUvServiceTest.php" line="18" assertions="1" time="0.000153"/>
+      <testcase name="testGetHigh" class="WhetherUvServiceTest" file="/home/vagrant/Code/Laravel/tests/service/WhetherUvServiceTest.php" line="24" assertions="1" time="0.000142"/>
+      <testcase name="testGetVeryHigh" class="WhetherUvServiceTest" file="/home/vagrant/Code/Laravel/tests/service/WhetherUvServiceTest.php" line="30" assertions="1" time="0.000154"/>
+      <testcase name="testGetExtreme" class="WhetherUvServiceTest" file="/home/vagrant/Code/Laravel/tests/service/WhetherUvServiceTest.php" line="36" assertions="1" time="0.000150"/>
+      <testsuite name="WhetherUvServiceTest::testGetLocaleRounded" tests="3" assertions="3" failures="0" errors="0" time="0.000423">
+        <testcase name="testGetLocaleRounded with data set #0" assertions="1" time="0.000155"/>
+        <testcase name="testGetLocaleRounded with data set #1" assertions="1" time="0.000117"/>
+        <testcase name="testGetLocaleRounded with data set #2" assertions="1" time="0.000151"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

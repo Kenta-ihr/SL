@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pmd version="@project.version@" timestamp="2016-09-14T08:39:12+00:00">
+  <file name="/home/vagrant/Code/Laravel/app/Console/Commands/FizzbuzzCommand.php">
+    <violation beginline="42" endline="42" rule="ShortVariable" ruleset="Naming Rules" externalInfoUrl="http://phpmd.org/rules/naming.html#shortvariable" priority="3">
+      Avoid variables with short names like $fb. Configured minimum length is 3.
+    </violation>
+  </file>
+  <file name="/home/vagrant/Code/Laravel/app/Exceptions/Handler.php">
+    <violation beginline="31" endline="31" rule="ShortVariable" ruleset="Naming Rules" externalInfoUrl="http://phpmd.org/rules/naming.html#shortvariable" priority="3">
+      Avoid variables with short names like $e. Configured minimum length is 3.
+    </violation>
+    <violation beginline="43" endline="43" rule="ShortVariable" ruleset="Naming Rules" externalInfoUrl="http://phpmd.org/rules/naming.html#shortvariable" priority="3">
+      Avoid variables with short names like $e. Configured minimum length is 3.
+    </violation>
+  </file>
+  <file name="/home/vagrant/Code/Laravel/app/Http/Controllers/PostsController.php">
+    <violation beginline="62" endline="62" rule="ShortVariable" ruleset="Naming Rules" externalInfoUrl="http://phpmd.org/rules/naming.html#shortvariable" priority="3">
+      Avoid variables with short names like $id. Configured minimum length is 3.
+    </violation>
+    <violation beginline="76" endline="76" rule="ShortVariable" ruleset="Naming Rules" externalInfoUrl="http://phpmd.org/rules/naming.html#shortvariable" priority="3">
+      Avoid variables with short names like $id. Configured minimum length is 3.
+    </violation>
+    <violation beginline="91" endline="91" rule="ShortVariable" ruleset="Naming Rules" externalInfoUrl="http://phpmd.org/rules/naming.html#shortvariable" priority="3">
+      Avoid variables with short names like $id. Configured minimum length is 3.
+    </violation>
+    <violation beginline="111" endline="111" rule="ShortVariable" ruleset="Naming Rules" externalInfoUrl="http://phpmd.org/rules/naming.html#shortvariable" priority="3">
+      Avoid variables with short names like $id. Configured minimum length is 3.
+    </violation>
+  </file>
+  <file name="/home/vagrant/Code/Laravel/app/Service/FizzbuzzService.php">
+    <violation beginline="28" endline="35" rule="CamelCaseMethodName" ruleset="Controversial Rules" package="App\Service" externalInfoUrl="#" class="FizzbuzzService" method="Fizzbuzz" priority="1">
+      The method Fizzbuzz is not named in camelCase.
+    </violation>
+  </file>
+  <file name="/home/vagrant/Code/Laravel/app/Service/WhetherUvService.php">
+    <violation beginline="21" endline="44" rule="CyclomaticComplexity" ruleset="Code Size Rules" package="App\Service" externalInfoUrl="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" class="WhetherUvService" method="handle" priority="3">
+      The method handle() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.
+    </violation>
+  </file>
+  <error filename="/home/vagrant/Code/Laravel/app/Http/Controllers/WhetherController.php" msg="Unexpected token: ??, line: 37, col: 43, file: /home/vagrant/Code/Laravel/app/Http/Controllers/WhetherController.php." />
+</pmd>

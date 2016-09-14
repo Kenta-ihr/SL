@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Laravel" default="build">
+
+    <property name="basedir" value="." />
+    <property name="appdir"  value="${basedir}/app" />
+    <property name="datadir" value="${basedir}/storage" />
+    <property name="logdir"  value="${datadir}/logs" />
+
+    <target name="build" depends="clean,prepare,phpunit,phpmd">
+    </target>
+
+    <target name="clean" description="clean">
+        <echo msg="clean" />
+        <delete dir="${logdir}" />
+        <delete dir="reports" includeemptydirs="true" />
+    </target>
+
+    <target name="prepare" description="prepare">
+        <echo msg="initialize" />
+        <mkdir dir="${logdir}" />
+        <mkdir dir="reports" />
+    </target>
+
+    <target name="phpunit">
+        <!-- どうやってカバレッジ出るようにすればいいんだろ？ -->
+        <phpunit codecoverage="false"
+                 bootstrap="bootstrap/autoload.php"
+                 configuration="phpunit.xml">
+            <batchtest>
+                <fileset dir="tests" >
+                    <include name="**/*Test.php" />
+                </fileset>
+            </batchtest>
+            <formatter todir="reports" type="xml" outfile="phpunit.xml"/>
+        </phpunit>
+    </target>
+
+    <target name="phpmd">
+        <phpmd rulesets="codesize,controversial,design,naming,unusedcode">
+            <fileset dir="${appdir}">
+                <include name="**/*.php" />
+            </fileset>
+            <formatter type="xml" outfile="reports/phpmd.xml" />
+        </phpmd>
+    </target>
+
+    <target name="phpcpd">
+        <phpcpd file="${appdir}">
+            <formatter type="pmd" outfile="reports/phpcpd.xml"/>
+        </phpcpd>
+    </target>
+</project>
