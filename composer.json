@@ -23,7 +23,8 @@
         "phpmd/phpmd": "@stable",
         "sebastian/phpcpd": "^2.0",
         "piece/stagehand-testrunner": "4.2.*",
-        "phing/phing": "2.*"
+        "phing/phing": "2.*",
+        "pdepend/pdepend": "2.*"
     },
     "autoload": {
         "classmap": [
