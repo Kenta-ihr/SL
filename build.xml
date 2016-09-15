@@ -33,7 +33,7 @@
             description="Performs static analysis, runs the tests, and generates project documentation"/>
 
     <target name="try-something"
-            depends="prepare,lint,phpmd"
+            depends="static-analysis,phpunit "
             description="succeed targets"/>
 
     <target name="full-build-parallel"
