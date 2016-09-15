@@ -230,16 +230,11 @@
             unless="phpunit.done"
             depends="prepare"
             description="Run unit tests with PHPUnit">
-        <phpunit codecoverage="false"
-                 bootstrap="bootstrap/autoload.php"
-                 configuration="phpunit.xml">
-            <batchtest>
-                <fileset dir="tests" >
-                    <include name="**/*Test.php" />
-                </fileset>
-            </batchtest>
-            <formatter todir="reports" type="xml" outfile="phpunit.xml"/>
-        </phpunit>
+        <exec executable="${phpunit}" resultproperty="result.phpunit" taskname="phpunit">
+            <arg value="--configuration"/>
+            <arg path="${basedir}/phpunit.xml"/>
+        </exec>
+
         <property name="phpunit.done" value="true"/>
     </target>
 
