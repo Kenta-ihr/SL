@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="name-of-project" basedir="." default="full-build">
+<project name="Laravel" basedir="." default="full-build">
     <!-- By default, we assume all tools to be on the $PATH
     <property name="pdepend" value="pdepend"/>
     <property name="phpcpd"  value="phpcpd"/>
@@ -88,7 +88,7 @@
         <apply executable="php" taskname="lint">
             <arg value="-l" />
 
-            <fileset dir="${basedir}/src">
+            <fileset dir="${basedir}/app">
                 <include name="**/*.php" />
                 <modified />
             </fileset>
