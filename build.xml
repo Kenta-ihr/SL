@@ -33,7 +33,7 @@
             description="Performs static analysis, runs the tests, and generates project documentation"/>
 
     <target name="try-something"
-            depends="prepare,lint"
+            depends="prepare,lint,phpmd"
             description="succeed targets"/>
 
     <target name="full-build-parallel"
@@ -168,7 +168,7 @@
         <exec executable="${phpmd}" taskname="phpmd">
             <arg path="${basedir}/app" />
             <arg value="xml" />
-            <arg path="${basedir}/build/phpmd.xml" />
+            <arg value="codesize,controversial,design,naming,unusedcode" />
             <arg value="--reportfile" />
             <arg path="${basedir}/build/logs/pmd.xml" />
         </exec>
