@@ -45,7 +45,7 @@
             description="Performs a lint check and runs the tests (without generating code coverage reports)"/>
 
     <target name="static-analysis"
-            depends="lint,phpmd-ci,phpcs-ci,phpcpd-ci"
+            depends="lint,pdepend,phploc-ci,phpmd-ci,phpcs-ci,phpcpd-ci"
             description="Performs static analysis" />
 
     <!-- Adjust the threadCount attribute's value to the number of CPUs -->
@@ -111,7 +111,7 @@
             description="Measure project size using PHPLOC and print human readable output. Intended for usage on the command line.">
         <exec executable="${phploc}" taskname="phploc">
             <arg value="--count-tests" />
-            <arg path="${basedir}/src" />
+            <arg path="${basedir}/app" />
             <arg path="${basedir}/tests" />
         </exec>
 
@@ -128,7 +128,7 @@
             <arg path="${basedir}/build/logs/phploc.csv" />
             <arg value="--log-xml" />
             <arg path="${basedir}/build/logs/phploc.xml" />
-            <arg path="${basedir}/src" />
+            <arg path="${basedir}/app" />
             <arg path="${basedir}/tests" />
         </exec>
 
@@ -143,7 +143,7 @@
             <arg value="--jdepend-xml=${basedir}/build/logs/jdepend.xml" />
             <arg value="--jdepend-chart=${basedir}/build/pdepend/dependencies.svg" />
             <arg value="--overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg" />
-            <arg path="${basedir}" />
+            <arg path="${basedir}/app" />
         </exec>
 
         <property name="pdepend.done" value="true"/>
