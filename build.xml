@@ -32,6 +32,10 @@
             depends="prepare,static-analysis,phpunit,phpdox,-check-failure"
             description="Performs static analysis, runs the tests, and generates project documentation"/>
 
+    <target name="try-something"
+            depends="prepare,lint"
+            description="succeed targets"/>
+
     <target name="full-build-parallel"
             depends="prepare,static-analysis-parallel,phpunit,phpdox,-check-failure"
             description="Performs static analysis (executing the tools in parallel), runs the tests, and generates project documentation"/>
@@ -151,7 +155,7 @@
         <exec executable="${phpmd}" taskname="phpmd">
             <arg path="${basedir}/app" />
             <arg value="text" />
-            <arg path="${basedir}/build/phpmd.xml" />
+            <arg value="codesize,controversial,design,naming,unusedcode" />
         </exec>
 
         <property name="phpmd.done" value="true"/>
