@@ -45,7 +45,7 @@
             description="Performs a lint check and runs the tests (without generating code coverage reports)"/>
 
     <target name="static-analysis"
-            depends="lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci"
+            depends="lint,phpmd-ci,phpcs-ci,phpcpd-ci"
             description="Performs static analysis" />
 
     <!-- Adjust the threadCount attribute's value to the number of CPUs -->
@@ -246,7 +246,7 @@
             description="Run unit tests with PHPUnit (without generating code coverage reports)">
         <exec executable="${phpunit}" failonerror="true" taskname="phpunit">
             <arg value="--configuration"/>
-            <arg path="${basedir}/build/phpunit.xml"/>
+            <arg path="${basedir}/phpunit.xml"/>
             <arg value="--no-coverage"/>
         </exec>
 
