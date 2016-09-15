@@ -25,7 +25,8 @@
         "piece/stagehand-testrunner": "4.2.*",
         "phing/phing": "2.*",
         "pdepend/pdepend": "2.*",
-        "phploc/phploc": "*"
+        "phploc/phploc": "*",
+        "theseer/phpdox": "*"
     },
     "autoload": {
         "classmap": [

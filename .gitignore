@@ -1,6 +1,7 @@
 /vendor
 /node_modules
 /phpunit-coverage
+/build
 .metadata
 Homestead.yaml
 Homestead.json
