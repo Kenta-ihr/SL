@@ -39,12 +39,12 @@ class FizzbuzzServiceTest extends PHPUnit_Framework_TestCase
     public function testGetFizzBuzzArray1()
     {
         $obj = new FizzbuzzService;
-        $this->assertEquals('1', $obj->Fizzbuzz(1));
+        $this->assertEquals('1', $obj->FizzBuzz(1));
     }
     public function testGetFizzBuzzArrayFizz()
     {
         $obj = new FizzbuzzService;
-        $this->assertEquals('1 2 Fizz', $obj->Fizzbuzz(3));
+        $this->assertEquals('1 2 Fizz', $obj->FizzBuzz(3));
     }
 
 }

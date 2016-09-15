@@ -25,7 +25,7 @@ class FizzbuzzService
         }
     }
 
-    function Fizzbuzz($num)
+    function FizzBuzz($num)
     {
         for ($i = 1; $i <= $num; $i++) {
             $str = '';

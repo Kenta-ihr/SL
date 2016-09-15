@@ -13,7 +13,7 @@ class FizzbuzzCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'app.fizzbuzz';
+    protected $signature = 'app.fizzBuzz';
 
     /**
      * The console command description.
@@ -41,7 +41,7 @@ class FizzbuzzCommand extends Command
     {
         $fb = new FizzbuzzService();
         for ($i = 1; $i <= 50; $i ++) {
-           $this->output->write($fb->Fizzbuzz($i) . ', ');
+           $this->output->write($fb->FizzBuzz($i) . ', ');
         }
     }
 }
