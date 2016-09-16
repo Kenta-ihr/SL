@@ -3,8 +3,7 @@
     <rule ref="./my_phpcs.xml">
     </rule>
 
-    <arg name="--report" value="checkstyle" />
-    <arg name="--report-file" value="./build/logs/checkstyle.xml" />
-    <arg name="--extensions" value="php" />
+    <arg name="report" value="checkstyle" />
+    <arg name="report-file" value="./build/logs/checkstyle.xml" />
 
 </ruleset>
