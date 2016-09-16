@@ -177,9 +177,6 @@
             description="Find coding standard violations using PHP_CodeSniffer and print human readable output. Intended for usage on the command line before committing.">
         <exec executable="${phpcs}" taskname="phpcs">
             <arg value="--standard=my_phpcs.xml" />
-            <arg value="--extensions=php" />
-            <arg path="${basedir}/app" />
-            <arg path="${basedir}/tests" />
         </exec>
 
         <property name="phpcs.done" value="true"/>
@@ -190,12 +187,7 @@
             depends="prepare"
             description="Find coding standard violations using PHP_CodeSniffer and log result in XML format. Intended for usage within a continuous integration environment.">
         <exec executable="${phpcs}" output="/dev/null" taskname="phpcs">
-            <arg value="--report=checkstyle" />
-            <arg value="--report-file=${basedir}/build/logs/checkstyle.xml" />
-            <arg value="--standard=my_phpcs.xml" />
-            <arg value="--extensions=php" />
-            <arg path="${basedir}/app" />
-            <arg path="${basedir}/tests" />
+            <arg value="--standard=my_phpcs_ci.xml" />
         </exec>
 
         <property name="phpcs.done" value="true"/>

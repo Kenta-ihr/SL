@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ruleset name="my_phpcs_ci">
+    <rule ref="./my_phpcs.xml">
+    </rule>
+
+    <arg name="--report" value="checkstyle" />
+    <arg name="--report-file" value="./build/logs/checkstyle.xml" />
+    <arg name="--extensions" value="php" />
+
+</ruleset>

@@ -5,6 +5,13 @@
         <exclude name="PSR1.Classes.ClassDeclaration"/>
     </rule>
 
+    <arg name="--report" value="checkstyle" />
+    <arg name="--report-file" value="./build/logs/checkstyle.xml" />
+    <arg name="--extensions" value="php" />
+
+    <file>./app/</file>
+    <file>./tests/</file>
+
     <exclude-pattern>*.blade.php</exclude-pattern>
     <exclude-pattern>*.twig.php</exclude-pattern>
     <exclude-pattern>bootstrap/</exclude-pattern>
