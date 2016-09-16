@@ -19,12 +19,14 @@
         "laravelcollective/html": "5.1.*",
         "barryvdh/laravel-ide-helper": "^2.2",
         "doctrine/dbal": "^2.5",
+        // CI lib
         "squizlabs/php_codesniffer": "2.*",
         "phpmd/phpmd": "@stable",
         "sebastian/phpcpd": "^2.0",
         "pdepend/pdepend": "2.*",
         "phploc/phploc": "*",
         "theseer/phpdox": "*"
+        // end CI lib
     },
     "autoload": {
         "classmap": [
