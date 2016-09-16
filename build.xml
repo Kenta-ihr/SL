@@ -32,10 +32,6 @@
             depends="prepare,static-analysis,phpunit,phpdox,-check-failure"
             description="Performs static analysis, runs the tests, and generates project documentation"/>
 
-    <target name="try-something"
-            depends="static-analysis,phpunit "
-            description="succeed targets"/>
-
     <target name="full-build-parallel"
             depends="prepare,static-analysis-parallel,phpunit,phpdox,-check-failure"
             description="Performs static analysis (executing the tools in parallel), runs the tests, and generates project documentation"/>
@@ -236,7 +232,6 @@
             <arg value="--configuration"/>
             <arg path="${basedir}/phpunit.xml"/>
         </exec>
-
         <property name="phpunit.done" value="true"/>
     </target>
 
