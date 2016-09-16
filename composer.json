@@ -19,7 +19,7 @@
         "laravelcollective/html": "5.1.*",
         "barryvdh/laravel-ide-helper": "^2.2",
         "doctrine/dbal": "^2.5",
-        
+
         "squizlabs/php_codesniffer": "2.*",
         "phpmd/phpmd": "@stable",
         "sebastian/phpcpd": "^2.0",
